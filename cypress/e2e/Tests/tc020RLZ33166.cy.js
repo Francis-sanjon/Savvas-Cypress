@@ -12,8 +12,8 @@ describe('', () => {
     // handling of exception
     //});
     And('Teacher clicks profile Icon', () => {
-        cy.get('.header__navbar').shadow().find('.profile-container-wrapper').click()
-        //home.getProfileIcon().click()
+        //cy.get('.header__navbar').shadow().find('.profile-container-wrapper').click()
+        home.getProfileIconNew().click()
     })
     And('Teacher clicks Setting option', () => {
         // bs.resetLanguage()
@@ -26,11 +26,13 @@ describe('', () => {
                 home.getSetting().should('have.text', 'Configuración').click()
 
                 profilePage.getPreparedLanguage().click()
-                cy.get('.ng-binding').eq(21).click()
+                profilePage.getEnglish().click()
+                // cy.get('.ng-binding').eq(21).click()
                 profilePage.getSaveBtn().click()
                 cy.wait(10000)
                 profilePage.getRealizeImg().click()
-                cy.get('.header__navbar').shadow().find('.profile-container-wrapper')
+                home.getProfileIconNew()
+              //  cy.get('.header__navbar').shadow().find('.profile-container-wrapper')
                 // home.getprofileIcon().click()
             }
 
@@ -48,7 +50,7 @@ describe('', () => {
     })
     And('clicks Save Button', () => {
         profilePage.getSaveBtn().click()
-        cy.wait(10000)
+        cy.wait(15000)
     })
     And('Teacher clicks savvas Realize Icon to go Dashboard page', () => {
         profilePage.getRealizeImg().click()

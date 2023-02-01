@@ -29,11 +29,26 @@ class Home {
   getProgramSpecialist() {
     return cy.get('.header__navbar').shadow().find('[class="help-item-a"]').eq(3)
   }
+  getProfileIconNew() {
+    return cy.get('.header__navbar').shadow().find('.profile-container-wrapper')
+    }
   getProfileIcon() {
     return cy.get('.header__navbar_student').shadow().find('[class="profile-container"]')
     }
+    getSettingNew() {
+      return cy.get('.header__navbar_student').shadow().find('[class="platform__navbar--profileUtility hydrated"]').shadow().find('[class="utility__item--userName"]')
+    }
+    getProfileName() {
+      return cy.get('.header__navbar_student').shadow().find('[data-utility-id="profile"]')
+    }
   getSetting() {
     return cy.get('.header__navbar').shadow().find('[class="avatar-dropdown hydrated"]').shadow().find('[data-id="settings"]')
+  }
+  getSettingIcon() {
+    return cy.get('.header__navbar_student').shadow().find('[class="avatar-dropdown hydrated"]').shadow().find('[data-id="settings"]')
+  }
+  getEllipsis(){
+    return  cy.get('.header__navbar_student').shadow().find('[aria-describeby="tooltip-id"]')
   }
   getClassCardTitle(){
     return  cy.get('.classInfiniteScroll').find('[class="class__title"]')

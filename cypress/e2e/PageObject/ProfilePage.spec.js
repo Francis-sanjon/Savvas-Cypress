@@ -26,6 +26,9 @@ class ProfilePage {
    getPrograms() {
       return cy.get('[class="dropdown-text"]').eq(0)
    }
+   getStudentName(){
+      return cy.get('#studentName')
+   }
    RollBack(condition) {
       if (condition == 'Setting') {
          home.getSetting().should('have.text', 'Settings').click()

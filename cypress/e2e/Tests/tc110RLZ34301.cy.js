@@ -21,26 +21,24 @@ describe('', () => {
     Then('User verifies the length of UserName', () => {
         home.getProfileIcon().then((data) => {
             fnameLength = data.length
-           })
+        })
     })
     And('User clicks Setting Icon', () => {
         cy.get('.header__navbar_student').shadow().find('[class="avatar-dropdown hydrated"]').shadow().find('[data-id="settings"]').click()
     })
     Then('User verifies if the length of the first name less than X char then ellipsis should not be displayed', () => {
-
-        cy.get('#studentName').then(($first) => {
+        profilePage.getStudentName().then(($first) => {
             const Value = $first.text()
             let firstValue = Value.split(" ")[0];
-            cy.get('.header__navbar_student').shadow().find('[class="platform__navbar--profileUtility hydrated"]').shadow().find('[class="utility__item--userName"]').then(($second) => {
+            home.getSettingNew().then(($second) => {
                 const secondValue = $second.text()
                 fullNameLength = $second.length
                 expect(firstValue).to.eq(secondValue)
 
-
             })
         })
         if (fnameLength < fullNameLength) {
-            cy.get('.header__navbar_student').shadow().find('[aria-describeby="tooltip-id"]').should('not.be.visible')
+            home.getEllipsis().should('not.be.visible')
         }
     })
     And('user clicks Home Button', () => {
