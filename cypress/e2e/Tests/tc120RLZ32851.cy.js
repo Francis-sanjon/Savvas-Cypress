@@ -1,4 +1,4 @@
-const data = require('../fixtures/xlsxData.json');
+//const data = require('../fixtures/xlsxData.json');
 const { Given, When, And, Then } = require("@badeball/cypress-cucumber-preprocessor")
 
 import Home from '../PageObject/01_Home.spec'
