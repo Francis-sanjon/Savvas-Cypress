@@ -22,6 +22,7 @@
   "dependencies": {
     "@cypress/webpack-preprocessor": "^5.16.1",
     "cypress-downloadfile": "^1.2.3",
+    "exceljs": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0"
   },
   "cypress-cucumber-preprocessor": {

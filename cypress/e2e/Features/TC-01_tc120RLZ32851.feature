@@ -1,4 +1,4 @@
-Feature: Help Icon
+Feature: Verify the Help Icon Updated with latest styles in Dashboard Page
 
     Scenario:Verify the Help Icon Updated with latest styles in Dashboard Page
         Given Teacher launche the Realize login Page

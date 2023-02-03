@@ -1,11 +1,25 @@
+const data = require('../fixtures/xlsxData.json');
 const { Given, When, And, Then } = require("@badeball/cypress-cucumber-preprocessor")
+
 import Home from '../PageObject/01_Home.spec'
 import BaseClass from "../PageObject/BaseClass.spec";
 import LoginPage from '../PageObject/LoginPage.spec';
+import Encryptions from '../EncryptionAndDecryption/Encryptions'
+const en=new Encryptions();
 const home = new Home();
 const bs = new BaseClass();
 const loginPage = new LoginPage();
-
+before('Before', () => {
+    cy.log('this is before block')
+    cy.task('readXlsx', { file: 'cypress/fixtures/excelData.xlsx', sheet: "Sheet1" }).then((rows) => {
+      let rowsLength = rows.length;
+      
+  
+      cy.writeFile("cypress/fixtures/xlsxData.json", { rows })
+      cy.writeFile("cypress/fixtures/xlsxData.txt", { rows })
+  
+   })
+  })
 
 describe('', () => {
     
@@ -17,6 +31,10 @@ describe('', () => {
     })
     When('Teacher enters valid username and password', () => {
         bs.savvasLogin('MSuite49win10chrome_teacher04', 'testing123$')
+//cy.log("UserName : "+data.rows[0].username)
+          let s=en.encrypt('testing123$')
+     cy.writeFile("cypress/fixtures/credential.txt", s)
+     cy.log("Decrypted : "+en.decrip('U2FsdGVkX1+EFkmgm6O4CMKOsYlDlAVNZMdIcRX+TDw='))
        
     })
     Then('Teacher Verify the Realize Dashboard Page', () => {

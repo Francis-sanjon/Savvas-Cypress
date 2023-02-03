@@ -1,8 +1,8 @@
-Feature: Verify clicking on the Rectangular class card title navigates to the assignment listing page of that class for Teacher user
+Feature: Verify clicking on the Rectangular Google class card title navigates to the assignment listing page of that class for Student
 
-    Scenario:Verify clicking on the Rectangular class card title navigates to the assignment listing page of that class for Teacher user
+    Scenario: Verify clicking on the Rectangular Google class card title navigates to the assignment listing page of that class for Student
         Given User launche the Realize login Page
-        When User enters valid username and password4
+        When User Login to Realize as Google Student
         Then User Verify the Realize Dashboard Page
         And User Mouse hover on the class card title
         Then User verify it displays with underline on the class card title
