@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="82.166" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-02-07T07:34:20" tests="0" file="cypress\e2e\Features\TC-04_tc010RLZ36955.feature" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Verify clicking on the Rectangular class card title navigates to the assignment listing page of that class for Teacher user" timestamp="2023-02-07T07:34:20" tests="1" time="81.697" failures="0">
+    <testcase name="Verify clicking on the Rectangular class card title navigates to the assignment listing page of that class for Teacher user Verify clicking on the Rectangular class card title navigates to the assignment listing page of that class for Teacher user" time="48.531" classname="Verify clicking on the Rectangular class card title navigates to the assignment listing page of that class for Teacher user">
+    </testcase>
+  </testsuite>
+</testsuites>

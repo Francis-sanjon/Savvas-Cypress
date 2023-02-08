@@ -44,6 +44,9 @@ class Home {
   getSetting() {
     return cy.get('.header__navbar').shadow().find('[class="avatar-dropdown hydrated"]').shadow().find('[data-id="settings"]')
   }
+  getSignOutBtn() {
+    return cy.get('.header__navbar').shadow().find('[class="avatar-dropdown hydrated"]').shadow().find('[data-id="signOut"]')
+  }
   getSettingIcon() {
     return cy.get('.header__navbar_student').shadow().find('[class="avatar-dropdown hydrated"]').shadow().find('[data-id="settings"]')
   }

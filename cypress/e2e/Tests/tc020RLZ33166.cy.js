@@ -8,16 +8,13 @@ const bs = new BaseClass();
 const profilePage = new ProfilePage()
 
 describe('', () => {
-    // cy.on('uncaught:exception', (err, runnable) => {
-    // handling of exception
-    //});
+    
     And('Teacher clicks profile Icon', () => {
-        //cy.get('.header__navbar').shadow().find('.profile-container-wrapper').click()
+       
         home.getProfileIconNew().click()
     })
     And('Teacher clicks Setting option', () => {
-        // bs.resetLanguage()
-
+      
         let condition = '';
         home.getSetting().then((data) => {
             let condition = data.text()

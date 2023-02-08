@@ -14,5 +14,7 @@ Feature: Verify FirstName
         And user clicks Browse Button
         Then User verify username displayed without ellipsis
         And User clicks Classes Menu
+         Then User verify username displayed without ellipsis
         And User clicks Grades Menu
+         Then User verify username displayed without ellipsis
         

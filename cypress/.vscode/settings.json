@@ -1,0 +1,10 @@
+{
+    "cucumberautocomplete.steps": [
+        // "step-definitions/*.js"
+        // cypress\e2e\Tests
+        "cypress/e2e/Tests/**/*.js"
+        
+    ],
+    "cucumberautocomplete.syncfeatures": "cypress/e2e/Features**/*.feature",
+    "cucumberautocomplete.strictGherkinCompletion": false
+  }
